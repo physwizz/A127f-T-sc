@@ -869,6 +869,11 @@ int kbase_device_populate_max_freq(struct kbase_device *kbdev)
 	 */
 	core_props = &(kbdev->gpu_props.props.core_props);
 #ifdef GPU_FREQ_KHZ_MAX
+
+
+#define GPU_FREQ_KHZ_MAX (1196000)
+#define DEFAULT_GPU_FREQ_KHZ_MAX (1196000)
+
 	core_props->gpu_freq_khz_max = GPU_FREQ_KHZ_MAX;
 #else
 	core_props->gpu_freq_khz_max = DEFAULT_GPU_FREQ_KHZ_MAX;
